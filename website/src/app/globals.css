@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* grid column two */
+.column_two {
+  position: relative;
+  bottom: 100px;
+}
+
+/* swiper */
+.packageSlider {
+  .swiper-slide {
+    width: 59%;
+    margin-left: 40px;
+    @media only screen and (max-width: 767px) {
+      margin-left: 0;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: rgb(246, 242, 239);
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.32);
+    color: black;
+    &::after {
+      font-size: 20px !important;
+      font-weight: 900;
+    }
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination {
+    position: relative;
+    padding-top: 6vh;
+    @media only screen and (min-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.Modal {
+  background-color: black;
+}
+
+.text-shadow {
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.footer-links:hover::after {
+  margin-left: 8px;
+  content: url(../../public/arrow.svg);
+}
+
